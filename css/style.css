@@ -1,0 +1,301 @@
+nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 2%;
+    padding-right: 5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ul li a.active {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto; /* 控制下划线在文本上方的位置 */
+    margin: 50px; /* 调整导航项之间的间距 */
+    padding-bottom: 20px; /* 添加下划线与文本之间的距离 */
+
+}
+
+h1.logo a:hover, h1.logo a:focus {
+    color: black;
+    transition: 0.3s;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: auto ;
+    margin-right: auto ;
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* navigation */
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+
+}
+a.btn:hover, a.btn.active:hover {
+    color: rgb(18, 94, 37);
+    transition: 0.3s;
+}
+
+
+.card_info img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+div.skip a {
+    position: absolute;
+    font-family: 'Black Ops One';
+    top: -40px;
+    margin-left: 10px;
+}
+
+div.skip a:hover, div.skip a:focus {
+    color: black;
+    text-decoration: underline;
+}
+
+body a:focus {
+    top: 10px;
+    transition: 0.5s;
+}
+
+nav a, #main {
+    font-family: "questrial", Arial, sans-serif; 
+}  
+
+.body_text {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    color: black;
+}
+
+body {
+    font-family: "questrial", Arial, sans-serif; }
+
+h1, h2, h3 {
+    font-family: "questrial", Arial, sans-serif; 
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    display: block;
+    font-size: 14px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h3, p {
+    font-family: "questrial", Arial, sans-serif; 
+    font-size: 14px;
+    
+}
+
+.card h3 {
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    line-height: 1.2;
+}
+
+
+.genre_gallery {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.genre_gallery img {
+    border-radius: 500px;
+    margin-top: 50px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(255, 255, 255,0.1);
+    padding: 90px 60px 80px 60px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 20px 20px 50px rgb(0, 0, 0,0.5);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255,0.5);
+    border-left: 1px solid rgba(255, 255, 255,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.image h2 {
+    position: absolute;
+    top: -60px;
+    right: 30px;
+    font-size: 2em;
+    color:rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+.image h4 {
+    margin-block: 0px;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+div.image {
+    display: contents;
+}
+
+.card p {
+    padding-left: 20px;
+    line-height: 1.2;
+}
+
+.current:hover, .current:focus {
+    border: solid 2px rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 12px 10px 10px 10px;
+    box-shadow: black;
+}
+
+body{
+    background-color:rgb(210, 218, 202);
+}
+@media screen and (prefers-reduced-motion: reduce) {
+
+    .card_info {
+        transition: none;
+    }
+    
+    .card_info:hover, .card_title:hover {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        transition: unset;
+    }
+
+}
+
+@media screen and (min-width: 700px){
+    /* FLEX STYLING */
+    .genre_gallery {
+        padding: 0;
+        margin: 0;
+    }
+
+    div.image {
+        display: block;
+    }
+
+    .card {
+        /* flex-direction: column; */
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    /* GRID STYLING */
+    .stupid_flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stupid_flex .card {
+        flex-direction: row; 
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+    }
+
+    #player {
+        grid-column: 1 / span 3;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    /* FLEX STYLING */
+    .stupid_flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .stupid_flex .card {
+        flex-direction: column; 
+    }
+
+    .stupid_flex .card p {
+        padding: 0px;
+    }
+
+    .genre_gallery {
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card p {
+        padding-left: 40px;
+        line-height: 1.5;
+
+    }
+
+
+}
+
+
+/* 特色展示区域 */
+.strengths {
+    padding: 40px 5%;
+    background-color: rgb(210, 218, 202);
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 50px; /* 添加顶部间距 */
+    margin-bottom: 50px; /* 添加底部间距 */
+}
+
+.strengths ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px; /* 增加项目之间的间距 */
+    margin: 0;
+    padding: 0;
+}
+
+.strengths li {
+    padding: 20px;
+    background-color: #edefed;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    list-style-type: none;
+    transition: transform 0.3s ease;
+}
+
+.strengths li:hover {
+    transform: translateY(-5px);
+}
